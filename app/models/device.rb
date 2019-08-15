@@ -1,3 +1,3 @@
 class Device < ApplicationRecord
-	validates :code, presence, uniqueness: true
+	validates :code, presence: true, uniqueness: true
 end
