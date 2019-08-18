@@ -1,24 +1,12 @@
-	<% provide(:title, "Home") %>
-	<!DOCTYPE html>
-	<html>
-	  <head>
-	    <title><%= yield(:title) %> </title>
-	  </head>
-	  <body>
-	    <h1></h1>
-	    <p>
-	      This is the list 
-
-	      <div class="row">
-	      	<div class="col-sm-3 col-md-2 sidebar" >
-	      		<ul class="nav nav-sidebar">
-	      			<li class="sidebar_overview"><%= link_to "User",{:controller => 'users', :action =>'index'}, method: :get %></li>
-	      			<li class="sidebar_personal_purchases"><%= link_to "Device", devices_path %></li>
-	      			</ul>
-	      			</div>
-	      		</div>
-	      		</p>
-	      	</body>
-	      	</html>
+    <% provide(:title, "Home") %>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title><%= yield(:title) %></title>
+    </head>
+    <body>
+        <h1>Home</h1>
+    </body>
+    </html>
 
 

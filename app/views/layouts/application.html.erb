@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= yield(:title) %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title><%= full_title(yield(:title)) %></title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+    <body>
+        <%= render 'layouts/header' %>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4"> <%= render 'layouts/navbar' %>
+            </div>
+            <div class="col-md-8"><%= yield %></div>
+        </div>
+    </div>
+    </body>
+    </html>
